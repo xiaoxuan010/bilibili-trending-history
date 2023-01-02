@@ -8,7 +8,7 @@ function getTrending() {
     http.get(BTrendingUrl, (res) => {
         // console.debug('statusCode:', res.statusCode);
         // console.debug('headers:', res.headers);
-        
+
         //收到输入，调用记录函数
         res.on('data', creatRecord);
     }).on('error', (e) => {
@@ -43,13 +43,12 @@ function creatRecord(data) {
         + ' '
         + nowTimeStr
         + '\n'
-        + dataStr
-        + '\n';
     showNameArr.forEach((showName, index) => {
         bilibiliTrendingHistory += `${index + 1}. ${showName}\n`;
     });
-    bilibiliTrendingHistory += '记录结束.\n';
-    // console.debug(bilibiliTrendingHistory);
+    bilibiliTrendingHistory += '\n原始数据：\n' + dataStr
+        + '\n\n记录结束.\n';
+    console.debug(bilibiliTrendingHistory);
     var fileName = nowTime.format("Y-MM-DDTHH");
     //创建目录
     try {
@@ -60,7 +59,7 @@ function creatRecord(data) {
         fs.mkdirSync(`${__dirname}/record`);
     }
     //写入记录
-    fs.writeFile(`record/${fileName}.log`, bilibiliTrendingHistory, { flag: 'a'}, err => {
+    fs.writeFile(`record/${fileName}.log`, bilibiliTrendingHistory, { flag: 'a' }, err => {
         if (err) {
             console.error(err);
             return;
