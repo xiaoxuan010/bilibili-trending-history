@@ -48,7 +48,7 @@ function creatRecord(data) {
     });
     bilibiliTrendingHistory += '\n原始数据：\n' + dataStr
         + '\n\n记录结束.\n';
-    console.debug(bilibiliTrendingHistory);
+    // console.debug(bilibiliTrendingHistory);
     var fileName = nowTime.format("Y-MM-DDTHH");
     //创建目录
     try {
