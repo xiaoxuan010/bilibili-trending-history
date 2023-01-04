@@ -1,3 +1,7 @@
+/* 
+ * 程序名：B站热搜历史记录程序
+ * Copyright (C) 2023, xiaoxuan010 
+ */
 var http = require("https");
 var fs = require("fs");
 var moment = require('moment');

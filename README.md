@@ -16,11 +16,11 @@ Copyright (C) 2023, xiaoxuan010
 
 2. 克隆本存储库: 
 
-   `git clone https://github.com/xiaoxuan010/bilibili-trending-history`
+   `git clone https://github.com/xiaoxuan010/bilibili-trending-record`
 
 3. 进入目录: 
 
-   `cd bilibili-trending-history`
+   `cd bilibili-trending-record`
 
 4. 安装必要依赖: 
 
